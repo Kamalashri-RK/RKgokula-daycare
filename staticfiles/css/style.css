@@ -1,0 +1,1632 @@
+/* GENERAL BODY */
+
+body{
+font-family:'Segoe UI', sans-serif;
+background:#eef5e1e0;
+margin:0;
+padding:0;
+overflow-x:hidden;
+}
+
+
+html{
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after{
+box-sizing:border-box;
+}
+
+img,
+iframe,
+video{
+max-width:100%;
+}
+
+
+/* NAVBAR */
+
+.white-navbar{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+/* LOGO */
+
+.logo{
+height:45px;
+width:auto;
+border-radius:50%;
+}
+
+
+/* BRAND CONTAINER */
+
+.brand-container{
+display:flex;
+flex-direction:column;
+line-height:1;
+min-width:0;
+flex:1 1 auto;
+}
+
+/* MAIN NAME */
+
+.brand-text{
+font-style:italic;
+font-family:cursive;
+font-size:clamp(22px, 2.2vw, 28px);
+font-weight:bold;
+color:#1e40af;
+white-space:normal;
+word-break:break-word;
+}
+
+/* SUB TEXT */
+
+.brand-subtext{
+font-size:clamp(12px, 1.4vw, 15px);
+color:red;
+margin-top:-2px;
+font-weight: bold;
+letter-spacing:1px;
+white-space:normal;
+}
+
+/* MENU LINKS */
+
+.custom-link{
+color:#0cd431 !important;
+font-weight:bold !important;
+font-size:clamp(16px, 1.6vw, 20px) !important;
+margin-left:15px;
+transition:0.3s;
+}
+
+
+/* MENU HOVER */
+
+.custom-link:hover{
+color:#f59e0b !important;
+transform:scale(1.05);
+}
+
+
+/* home page HERO IMAGE */
+
+.hero-img{
+height:clamp(320px, 60vw, 500px);
+width:100%;
+object-fit:cover;
+}
+
+
+/* HERO TEXT */
+
+.hero-text{
+top:50%;
+bottom:auto;
+transform:translateY(-50%);
+text-align:center;
+left:12%;
+right:12%;
+padding-bottom:1.25rem;
+z-index:2;
+}
+
+.hero-text h1,
+.hero-text h4{
+color:white;
+font-weight:bold;
+font-size:clamp(28px, 6vw, 60px);
+font-family:cursive;
+}
+
+.hero-text p{
+color:yellow;
+font-size:clamp(16px, 3vw, 30px);
+font-weight:500;
+display:block !important;
+margin-bottom:0;
+visibility:visible !important;
+opacity:1 !important;
+}
+
+
+/* SECTION TITLE */
+
+.section-title{
+color:#1e40af;
+font-weight:bold;
+margin-bottom:30px;
+}
+
+
+/* PROGRAM FLOWER CARDS */
+
+.program-card{
+
+padding:30px 20px;
+text-align:center;
+height:100%;
+
+/* flower blob shape */
+
+border-radius:60% 40% 55% 45% / 45% 55% 40% 60%;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
+transition:0.4s;
+}
+
+/* different flower colors */
+
+.program-card-row > div:nth-child(1) .program-card,
+.core-values-row > div:nth-child(1) .program-card{
+background:#e87982;
+}
+
+.program-card-row > div:nth-child(2) .program-card,
+.core-values-row > div:nth-child(2) .program-card{
+background:#7bdbec;
+}
+
+.program-card-row > div:nth-child(3) .program-card,
+.core-values-row > div:nth-child(3) .program-card{
+background:#80ef9a;
+}
+
+.program-card-row > div:nth-child(4) .program-card,
+.core-values-row > div:nth-child(4) .program-card{
+background:#fff3cd;
+}
+
+/* hover effect */
+
+@media (hover:hover){
+.program-card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+background:#ffb347 !important;
+color:white;
+
+}
+}
+
+/* title */
+
+.program-card h4{
+
+font-weight:bold;
+margin-bottom:10px;
+color:#1e40af;
+
+}
+
+@media (hover:hover){
+.program-card:hover h4{
+color:white;
+}
+}
+
+/* paragraph */
+
+.program-card p{
+
+font-size:20px;
+line-height:1.6;
+
+}
+
+
+/* PHILOSOPHY BOX */
+
+.philosophy-card{
+background:#6a8ee3;
+padding:40px;
+border-radius:30px;
+text-align:center;
+font-size:18px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+color: white;
+}
+
+
+/* UNIQUE APPROACH CARDS */
+
+.approach-card{
+color: white;
+padding:60px 30px;
+border-radius:20px;
+background-size:cover;
+background-position:center;
+margin-bottom:25px;
+position:relative;
+box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
+min-height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+/* Dark overlay so text is readable */
+
+.approach-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+border-radius:20px;
+z-index:1;
+}
+
+.approach-overlay{
+position:relative;
+z-index:2;
+}
+/* APPROACH BACKGROUND IMAGES */
+
+.gita-bg{
+background-image:url('/static/images/gita.png');
+}
+
+.yoga-bg{
+background-image:url('/static/images/yoga1.png');
+}
+
+.activity-bg{
+background-image:url('/static/images/activity.png');
+}
+
+.values-bg{
+background-image:url('/static/images/values.png');
+}
+
+
+/* TWO GRID CARDS */
+
+.info-card{
+background:#99e042;
+padding:35px;
+border-radius:20px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+height:100%;
+font-size: 20px;
+}
+
+
+/* NUTRITION SECTION */
+
+.nutrition-section{
+background-image:url('/static/images/kitchen.png');
+background-size:cover;
+background-position:center;
+padding:clamp(80px, 12vw, 150px) 20px;
+margin-top:60px;
+position:relative;
+}
+
+.nutrition-overlay{
+background:rgba(0,0,0,0.6);
+color:white;
+padding:40px;
+text-align:center;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+}
+
+
+/* ENVIRONMENT + CARE TEAM */
+
+.plain-card{
+background:#e3f57b;
+padding:35px;
+border-radius:20px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+height:100%;
+font-size: 25px;
+}
+
+
+/* SECTION SPACING */
+
+section{
+padding-top:clamp(28px, 5vw, 40px);
+padding-bottom:clamp(28px, 5vw, 40px);
+}
+
+
+/* MOTTO */
+
+.motto-section{
+position:relative;
+padding:50px;
+margin-top:60px;
+font-weight:bold;
+overflow:hidden;
+}
+
+.motto-section::before,
+.motto-section::after{
+content:"";
+position:absolute;
+border-radius:50%;
+pointer-events:none;
+opacity:0.2;
+animation:motto-blob 6s ease-in-out infinite alternate;
+}
+
+.motto-section::before{
+width:180px;
+height:180px;
+top:-60px;
+left:-40px;
+background:rgba(255,255,255,0.35);
+}
+
+.motto-section::after{
+width:160px;
+height:160px;
+right:-40px;
+bottom:-70px;
+background:rgba(255,140,0,0.16);
+animation-duration:7s;
+}
+
+.motto-marquee{
+display:inline-block;
+white-space:nowrap;
+position:relative;
+z-index:1;
+padding-left:0;
+animation:motto-enter 0.7s ease-out, motto-scroll 9s linear 0.7s infinite;
+will-change:transform;
+}
+
+/* MOTTO DESIGN */
+
+.motto-box{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.motto-text{
+font-weight:bold;
+font-size:26px;
+max-width:600px;
+}
+
+.motto-img{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+
+.left-img{
+transform:rotate(-10deg);
+}
+
+.right-img{
+transform:rotate(10deg);
+}
+
+.read-btn{
+background:red;
+color:white;
+font-weight:bold;
+padding:10px 25px;
+border-radius:30px;
+transition:0.3s;
+text-decoration:none;
+}
+
+.read-btn:hover{
+background:#0041e6;
+color:white;
+transform:translateY(-2px);
+text-decoration:none;
+}
+
+/* FOOTER */
+
+.footer{
+background:#1e40af;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:12px 15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0px 4px 10px rgba(0,0,0,0.3);
+z-index:1100;
+}
+
+.whatsapp-btn:hover{
+background:#1ebe5d;
+}
+
+/* PARAGRAPH TEXT */
+
+p{
+font-size:clamp(16px, 1.8vw, 20px);
+line-height:1.7;
+overflow-wrap:anywhere;
+}
+
+/* ADMISSION SECTION */
+
+.admission-section{
+background:#1b73d8;
+padding:70px 0;
+}
+
+/* MAIN BOX */
+
+.admission-box{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+
+.admission-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+/* IMAGE TEXT OVERLAY */
+
+.admission-image{
+position:relative;
+}
+
+.image-text{
+position:absolute;
+bottom:20px;
+left:20px;
+right:20px;
+background:rgba(0,0,0,0.5);
+color:white;
+padding:15px;
+font-size:clamp(14px, 1.8vw, 18px);
+border-radius:10px;
+text-align:center;
+}
+
+.highlight-text{
+color:red;
+font-weight:bold;
+}
+
+/* FORM SIDE */
+
+.admission-form{
+padding:40px;
+background:#08d673;
+}
+
+/* INPUT STYLE */
+
+/* 3D INPUT STYLE */
+
+.admission-form input,
+.admission-form textarea,
+.admission-form select{
+background:#e6e6e6;
+border:none;
+border-radius:12px;
+padding:12px;
+font-size:16px;
+
+/* 3D effect */
+box-shadow:
+inset 4px 4px 8px rgba(0,0,0,0.15),
+inset -4px -4px 8px rgba(255,255,255,0.7);
+
+transition: all 0.3s ease;
+}
+
+/* FOCUS EFFECT */
+.admission-form input:focus,
+.admission-form textarea:focus,
+.admission-form select:focus{
+outline:none;
+
+/* glow effect */
+box-shadow:
+0 0 0 2px #1e40af,
+inset 2px 2px 5px rgba(0,0,0,0.1),
+inset -2px -2px 5px rgba(255,255,255,0.6);
+
+background:#f5f5f5;
+}
+
+/* TEXTAREA HEIGHT */
+.admission-form textarea{
+height:100px;
+resize:none;
+}
+
+/* BUTTON */
+
+.admission-btn{
+background:#ff8c00 !important;
+color:white;
+font-weight:bold;
+padding:10px 30px;
+border-radius:50px;
+border: none !important;
+}
+
+.admission-btn:hover{
+background:#e67600;
+}
+
+.admission-title{
+color:white !important;
+}
+
+.admission-form label{
+color:#1e40af;
+font-weight:bold;
+font-size:18px;
+margin-bottom:5px;
+display:block;
+}
+
+/* FOOTER DESIGN */
+
+.main-footer{
+background:#3f3fa8;
+color:white;
+padding:60px 0;
+margin-top:60px;
+}
+
+.main-footer h4{
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.main-footer p{
+color:#e0e0ff;
+}
+
+.footer-links{
+list-style:none;
+padding:0;
+}
+
+.footer-links li{
+margin-bottom:10px;
+}
+
+.footer-links a{
+color:#e0e0ff;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+color:#ffa500;
+}
+
+
+
+/*  ----------------------------- ABOUT HEADER BACKGROUND  ------------------------------------*/
+
+.about-header{
+background-image:url('/static/images/about-bg.png');
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+color:white;
+position:relative;
+margin-bottom:0;
+}
+
+.about-header::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.about-header .container{
+position:relative;
+z-index:2;
+}
+
+.about-title{
+font-size:clamp(28px, 4.5vw, 40px);
+font-weight:bold;
+}
+
+.about-subtitle{
+font-size:clamp(16px, 2vw, 18px);
+margin-top:10px;
+margin-bottom:0;
+}
+
+.about-story-section{
+margin-top:60px !important;
+}
+
+/* STORY IMAGE */
+
+.story-image{
+position:relative;
+}
+
+.story-image img{
+width:100%;
+border-radius:10px;
+}
+
+.story-overlay{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+background:rgba(0,0,0,0.6);
+color:white;
+padding:20px;
+border-radius:0 0 10px 10px;
+}
+
+.brand-highlight{
+color:#1e40af;
+font-weight:bold;
+}
+
+/* KRISHNA DIVIDER */
+
+.krishna-divider{
+text-align:center;
+margin:60px 0;
+position:relative;
+}
+
+.krishna-divider::before{
+content:"";
+position:absolute;
+top:50%;
+left:0;
+width:40%;
+height:2px;
+background:#1e40af;
+}
+
+.krishna-divider::after{
+content:"";
+position:absolute;
+top:50%;
+right:0;
+width:40%;
+height:2px;
+background:#1e40af;
+}
+
+.krishna-divider img{
+width:60px;
+position:relative;
+z-index:2;
+}
+
+/* WHY RADHA KRISHNA GOKULA */
+
+.why-card{
+background:#6be6fc;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+height:100%;
+}
+
+.why-card:hover{
+transform:translateY(-8px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.why-card h4{
+color:#5c7deb;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+/* WHY RADHA KRISHNA GOKULA BLOB DESIGN */
+
+.why-blob{
+padding:40px 30px;
+text-align:center;
+min-height:260px;
+transition:0.3s;
+
+/* blob shape */
+border-radius: 45% 55% 60% 40% / 40% 45% 55% 60%;
+}
+
+.why-blob h4{
+color:#1e40af;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.why-blob:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* soft colors */
+
+.blob1{
+background:#f57474;
+}
+
+.blob2{
+background:#6899e7;
+}
+
+.blob3{
+background:#9af955;
+}
+
+.blob4{
+background:#f1b648;
+}
+/* PROGRAM PAGE */
+
+.program-banner{
+background-image:url("/static/images/bg8.png");
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+color:white;
+text-align:center;
+}
+.program-banner h1{
+font-size:clamp(30px, 5vw, 48px);
+font-weight:bold;
+}
+
+.program-section{
+padding:70px 20px;
+margin-top:40px;
+border-radius:20px;
+}
+
+.program-section h2{
+color:#1e40af;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+
+
+.program-img{
+width:100%;
+border-radius:20px;
+display:block;
+object-fit:cover;
+}
+
+.program-title{
+color:#1e40af;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+/* PROGRAM BACKGROUND COLORS */
+
+.infant-section{
+background:#f0a9a9;
+padding:60px 30px;
+border-radius:25px;
+}
+
+.toddler-section{
+background:#86aef0;
+padding:60px 30px;
+border-radius:25px;
+}
+
+.playgroup-section{
+background:#95f3ae;
+padding:60px 30px;
+border-radius:25px;
+}
+
+.afterschool-section{
+background:#edc788;
+padding:60px 30px;
+border-radius:25px;
+}
+
+.daycare-section{
+background:#b694f6;
+padding:60px 30px;
+border-radius:25px;
+}
+
+/* ACTIVITY BLOB CARDS */
+
+.activity-card{
+background:#ffe5b4;
+padding:35px 25px;
+text-align:center;
+min-height:220px;
+
+border-radius: 45% 55% 60% 40% / 40% 45% 55% 60%;
+
+transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.activity-card h5{
+margin-top:10px;
+font-weight:bold;
+color:#1e40af;
+}
+
+.activity-card p{
+font-size:14px;
+margin-top:8px;
+}
+
+.activity-card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+background:#ff8c00;
+color:white;
+}
+
+.activity-card:hover h5{
+color:white;
+}
+
+.row > div:nth-child(1) .activity-card{background:#eaa8a8;}
+.row > div:nth-child(2) .activity-card{background:#9bbcf1;}
+.row > div:nth-child(3) .activity-card{background:#adf17d;}
+.row > div:nth-child(4) .activity-card{background:#e9c178;}
+.row > div:nth-child(5) .activity-card{background:#77eded;}
+.row > div:nth-child(6) .activity-card{background:#f87ac5;}
+.row > div:nth-child(7) .activity-card{background:#96ea87;}
+.row > div:nth-child(8) .activity-card{background:#f8cd63;}
+
+
+
+/* CURRICULUM PAGE */
+
+.curriculum-banner{
+background-image:url("/static/images/bg3.png");
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+color:white;
+text-align:center;
+}
+
+.curriculum-banner h1{
+font-size:clamp(30px, 5vw, 48px);
+font-weight:bold;
+}
+
+.curriculum-card{
+background:#c973eb;
+padding:30px 20px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.curriculum-card h4{
+color:#1e40af;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.curriculum-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 20px rgba(230, 237, 28, 0.779);
+}
+
+/* LEARNING BY AGE HEADER */
+
+.learning-header{
+background:#a4baef;
+padding:30px 10px;
+border-radius:20px;
+display:inline-block;
+max-width:1200px;
+margin: 20px;;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* AGE LEARNING CARDS */
+
+.age-card{
+padding:35px;
+text-align:center;
+transition:0.3s;
+height:100%;
+}
+
+/* snake blob shapes */
+
+.age1{
+background:#ee815f;
+border-radius:65% 35% 60% 40% / 40% 60% 35% 65%;
+}
+
+.age2{
+background:#5b8fe9;
+border-radius:40% 60% 35% 65% / 60% 40% 65% 35%;
+}
+
+.age3{
+background:#95e859;
+border-radius:55% 45% 70% 30% / 30% 60% 40% 70%;
+}
+
+.age-card:hover{
+transform:translateY(-10px);
+}
+
+/* smaller images */
+
+.age-img{
+width:min(180px, 100%);
+height:200px;
+object-fit:cover;
+border-radius:40px;
+margin-bottom:20px;
+}
+
+/* heading */
+
+.age-card h4{
+font-weight:bold;
+margin-bottom:15px;
+color:#1e40af;
+}
+
+/* list */
+
+.age-card ul{
+text-align:left;
+padding-left:20px;
+font-size:15px;
+}
+
+
+
+/* HORIZONTAL BLOB SECTION */
+
+.approach-blob{
+padding:50px 40px;
+border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.approach-blob:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* COLORS */
+
+.blob-blue{
+background:#aae556;
+}
+
+.blob-green{
+background:#2fd6f4;
+}
+
+/* GALLERY PAGE */
+
+.gallery-img{
+width:100%;
+height:clamp(220px, 38vw, 370px);
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-img:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-banner{
+background-image:url("/static/images/bg4.png");
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+color:white;
+text-align:center;
+}
+
+/* CONTACT PAGE */
+
+.contact-banner{
+background-image:url("/static/images/bg7.png");
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+color:white;
+text-align:center;
+}
+
+/* CONTACT BLOB */
+
+.contact-blob{
+background:#10d194;
+padding:40px;
+border-radius:60px 20px 60px 20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* FORM BLOB */
+
+.form-blob{
+background:#f8cb37;
+padding:40px;
+border-radius:20px 60px 20px 60px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* FORM INPUT */
+
+.form-blob input,
+.form-blob textarea,
+.form-blob select{
+border-radius:10px;
+min-height:48px;
+transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+box-shadow:0 6px 14px rgba(15, 23, 42, 0.08);
+}
+
+.form-blob textarea{
+min-height:120px;
+}
+
+/* SUBMIT BUTTON */
+
+.enquiry-btn{
+background:#ff8c00;
+color:white;
+font-weight:bold;
+padding:12px;
+border-radius:10px;
+min-height:48px;
+}
+
+.enquiry-btn:hover{
+background:#e67300;
+}
+
+.form-control::placeholder{
+color:#1e4deb !important;
+font-family: cursive !important;
+font-size:clamp(16px, 2vw, 20px);
+}
+
+.admission-form .form-control:focus,
+.admission-form select:focus,
+.admission-form textarea:focus,
+.form-blob .form-control:focus,
+.form-blob select:focus,
+.form-blob textarea:focus{
+transform:translateY(-2px) scale(1.01);
+box-shadow:0 10px 22px rgba(30, 64, 175, 0.18);
+border-color:#1e40af;
+}
+
+@keyframes motto-scroll{
+0%{
+transform:translateX(100%);
+}
+100%{
+transform:translateX(-100%);
+}
+}
+
+@keyframes motto-enter{
+0%{
+transform:translateX(-18%);
+opacity:0;
+}
+100%{
+transform:translateX(0);
+opacity:1;
+}
+}
+
+@keyframes motto-blob{
+0%{
+transform:translate3d(0, 0, 0) scale(1);
+border-radius:58% 42% 46% 54% / 51% 39% 61% 49%;
+}
+100%{
+transform:translate3d(10px, 12px, 0) scale(1.08);
+border-radius:42% 58% 60% 40% / 44% 58% 42% 56%;
+}
+}
+
+@media (prefers-reduced-motion: reduce){
+.motto-marquee{
+animation:none;
+padding-left:0;
+white-space:normal;
+}
+
+[data-aos]{
+transition:none !important;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea,
+.form-blob input,
+.form-blob textarea,
+.form-blob select{
+transition:none;
+}
+}
+/* MAP */
+
+.map-box{
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Dashbord  */
+
+table{
+background:rgb(233, 204, 204);
+border-radius:10px;
+overflow:hidden;
+}
+
+th,
+td{
+white-space:nowrap;
+}
+
+.badge{
+font-size:14px;
+padding:6px 10px;
+
+}
+
+.dashboard-container{
+margin-top:90px;
+background-image: url('/static/images/bg1.png');
+color: white;
+}
+
+/* ------------------EDIT PAGE------------------ */
+
+.edit-header{
+background:#1e40af;
+color:white;
+text-align:center;
+padding:15px;
+border-radius:8px;
+margin-bottom:25px;
+margin-top: 3px;
+}
+
+.edit-header h3{
+margin:0;
+font-weight:bold;
+}
+
+.edit-form label{
+font-weight:bold;
+color:#1e40af;
+}
+
+.edit-form{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+background-color: #2fd6f4;
+}
+
+.edit-container{
+margin-top:120px;
+max-width:650px !important;
+width:100% !important;
+}
+
+/* ------------------------- LOGIN PAGE ---------------------------------*/
+
+.login-container{
+margin-top:120px;
+display:flex;
+justify-content:center;
+}
+
+.login-box{
+width:100%;
+max-width:350px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.login-title{
+text-align:center;
+color:#1e40af;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.navbar-toggler{
+border-color:rgba(30, 64, 175, 0.25) !important;
+padding:0.4rem 0.65rem;
+background-color:#ffffff;
+position:relative;
+z-index:1101;
+flex-shrink:0;
+}
+
+.navbar-toggler:focus{
+box-shadow:none;
+}
+
+.navbar-toggler-icon{
+background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2830,64,175,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+display:block;
+width:1.5em;
+height:1.5em;
+background-size:100% 100%;
+background-repeat:no-repeat;
+background-position:center;
+}
+
+@media (max-width: 1023.98px){
+.navbar .container{
+align-items:flex-start;
+}
+
+.navbar-collapse{
+width:100%;
+margin-top:12px;
+padding:12px 16px;
+background:white;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.navbar-nav{
+width:100%;
+}
+
+.custom-link{
+display:block;
+margin-left:0;
+padding:10px 0 !important;
+}
+
+.navbar-brand{
+max-width:calc(100% - 72px);
+margin-right:0;
+align-items:flex-start !important;
+flex:1 1 auto;
+white-space:normal;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px){
+.hero-text{
+left:10%;
+right:10%;
+}
+
+.program-card p{
+font-size:18px;
+}
+
+.gallery-img{
+height:300px;
+}
+
+.dashboard-container{
+padding-left:20px;
+padding-right:20px;
+}
+}
+
+@media (min-width: 480px) and (max-width: 767.98px){
+.hero-text{
+left:8%;
+right:8%;
+top:52%;
+}
+
+.philosophy-card,
+.nutrition-overlay,
+.contact-blob,
+.form-blob,
+.admission-form,
+.info-card,
+.plain-card,
+.approach-blob{
+padding:24px;
+}
+
+.program-card,
+.activity-card,
+.why-blob{
+min-height:auto;
+}
+
+.program-img{
+max-height:320px;
+}
+
+.admission-image img{
+min-height:280px;
+}
+
+.image-text{
+left:12px;
+right:12px;
+bottom:12px;
+padding:12px;
+}
+
+.main-footer{
+padding:40px 0;
+}
+
+.whatsapp-btn{
+right:16px;
+bottom:16px;
+font-size:24px;
+padding:10px 13px;
+}
+
+.dashboard-container{
+margin-top:80px;
+padding-left:12px;
+padding-right:12px;
+}
+
+.edit-container,
+.login-container{
+margin-top:100px;
+}
+
+.about-header{
+padding:110px 20px 80px;
+}
+
+.about-story-section{
+margin-top:40px !important;
+}
+}
+
+@media (min-width: 320px) and (max-width: 479.98px){
+.white-navbar .container{
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+flex-wrap:nowrap;
+gap:8px;
+padding-left:12px;
+padding-right:12px;
+max-width:100%;
+overflow:hidden;
+}
+
+.hero-text{
+left:6%;
+right:6%;
+top:54%;
+padding-bottom:0.75rem;
+}
+
+.hero-img{
+height:320px;
+}
+
+.brand-text{
+font-size:20px;
+}
+
+.brand-subtext{
+font-size:11px;
+letter-spacing:0.5px;
+}
+
+.logo{
+height:38px;
+}
+
+.navbar-brand{
+max-width:calc(100% - 56px);
+margin-right:0;
+align-items:flex-start !important;
+flex:1 1 0;
+white-space:normal;
+min-width:0;
+overflow:hidden;
+}
+
+.navbar-toggler{
+padding:0.35rem 0.55rem;
+margin-left:0;
+align-self:flex-start;
+}
+
+.navbar-toggler-icon{
+width:1.35em;
+height:1.35em;
+}
+
+.brand-container,
+.brand-text,
+.brand-subtext,
+.navbar-collapse,
+.container,
+.row,
+section,
+.program-card,
+.activity-card,
+.why-blob,
+.curriculum-card,
+.gallery-img,
+.program-img{
+max-width:100%;
+}
+
+.hero-text h1,
+.hero-text h4{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+font-size:15px;
+line-height:1.5;
+}
+
+.philosophy-card,
+.nutrition-overlay,
+.contact-blob,
+.form-blob,
+.admission-form,
+.info-card,
+.plain-card,
+.approach-blob{
+padding:20px;
+}
+
+.program-card{
+padding:24px 18px;
+}
+
+.program-card p{
+font-size:17px;
+}
+
+.activity-card{
+padding:28px 20px;
+}
+
+.gallery-img{
+height:220px;
+}
+
+.admission-image img{
+min-height:240px;
+}
+
+.program-img{
+max-height:260px;
+}
+
+.motto-section{
+padding:32px 20px;
+}
+
+.krishna-divider::before,
+.krishna-divider::after{
+width:28%;
+}
+
+.table-responsive{
+border-radius:10px;
+}
+
+.about-header{
+padding:105px 16px 72px;
+}
+
+.about-story-section{
+margin-top:32px !important;
+}
+}
+
+@media (max-width: 480px){
+.whatsapp-btn{
+right:10px;
+bottom:20px;
+}
+}
+
+@media (min-width: 1024px){
+.navbar-collapse{
+margin-top:0;
+padding:0;
+background:transparent;
+box-shadow:none;
+}
+
+.dashboard-container{
+padding-left:24px;
+padding-right:24px;
+}
+}
+
+@media (max-width: 575.98px){
+.motto-section{
+padding:32px 20px;
+}
+
+.krishna-divider::before,
+.krishna-divider::after{
+width:32%;
+}
+
+.table-responsive{
+border-radius:10px;
+}
+}
