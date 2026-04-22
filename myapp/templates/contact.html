@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Contact Daycare in Bangalore | Radha Krishna Gokula{% endblock %}
+{% block meta_description %}Contact Radha Krishna Gokula daycare in Bangalore for admissions, visits, childcare enquiries, timings, and location details.{% endblock %}
+{% block meta_keywords %}contact daycare Bangalore, daycare admission, childcare enquiry, preschool contact, daycare location{% endblock %}
+{% block canonical_path %}/contact{% endblock %}
+{% block og_title %}Contact Radha Krishna Gokula Daycare{% endblock %}
+{% block og_description %}Get in touch for admissions, visits, daycare enquiries, timings, and location details in Bangalore.{% endblock %}
+{% block og_path %}/contact{% endblock %}
+
+{% block content %}
+{% if messages %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    {% for message in messages %}
+    Swal.fire({
+        icon: 'success',
+        title: 'Enquiry Submitted',
+        text: '{{ message }}',
+        confirmButtonColor: '#ff8c00'
+    });
+    {% endfor %}
+});
+</script>
+{% endif %}
+<!-- CONTACT BANNER -->
+
+<section class="contact-banner">
+
+<div class="container text-center">
+
+<h1>Contact Radha Krishna Gokula</h1>
+
+<p>
+We would love to hear from you. Reach out for daycare enquiries,
+visits or any questions about our programs.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT SECTION -->
+
+<section class="container mt-5">
+
+<div class="row g-4">
+
+<!-- CONTACT DETAILS -->
+
+<div class="col-12 col-lg-5">
+
+<div class="contact-blob">
+
+<h2>Get In Touch</h2>
+
+<p>
+We welcome parents who wish to provide their children with a
+safe, loving and value-based environment.
+</p>
+
+<div class="contact-info">
+
+<p><strong>📍 Location</strong><br>
+Chikkalasandra, Bangalore, 560061
+</p>
+
+<p><strong>📞 Phone</strong><br>
++91 8088121292
+</p>
+
+<p><strong>📧 Email</strong><br>
+radhakrishnagokula@gmail.com
+</p>
+
+<p><strong>⏰ Timings</strong><br>
+Monday – Friday<br>
+9:00 AM – 6:30 PM
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ENQUIRY FORM -->
+
+<div class="col-12 col-lg-7">
+
+<div class="form-blob" data-aos="fade-up" data-aos-delay="350">
+
+<h2 class="text-center mb-4">Admission Enquiry</h2>
+
+<form method="POST" action="/">
+{% csrf_token %}
+
+<div class="mb-3">
+<input type="text" name="child_name" class="form-control  text-center" placeholder="Child Name">
+</div>
+
+<div class="mb-3">
+<input type="text" name="parent_name" class="form-control  text-center" placeholder="Parent Name">
+</div>
+
+<div class="mb-3">
+<input type="text" name="phone" class="form-control text-center" placeholder="Phone Number">
+</div>
+
+<div class="mb-3">
+<input type="date" name="dob" class="form-control  text-center">
+</div>
+
+<div class="mb-3">
+<input type="text" name="city" class="form-control  text-center" placeholder="City">
+</div>
+
+<div class="mb-3">
+
+<select name="age_group" class="form-control  text-center">
+
+<option>Select age group</option>
+<option>Infant (12–24 months)</option>
+<option>Toddler (2–3 years)</option>
+<option>Playgroup (2–3 years)</option>
+<option>After School</option>
+</select>
+
+</div>
+
+<div class="mb-3">
+<textarea name="message" class="form-control text-center" placeholder="Message"></textarea>
+</div>
+
+<button type="submit" class="enquiry-btn w-100">
+Submit Enquiry
+</button>
+
+</form>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- LOCATION MAP -->
+
+<section class="container mt-5 mb-5">
+
+<h2 class="section-title text-center">Our Location</h2>
+
+<div class="map-box">
+
+<iframe
+src="https://maps.google.com/maps?q=Chikkalasandra%20Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="350" style="border:0;" loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+{% endblock %}

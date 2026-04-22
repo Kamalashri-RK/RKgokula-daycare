@@ -1,0 +1,428 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Best Daycare in Bangalore | Radha Krishna Gokula{% endblock %}
+{% block meta_description %}Safe and loving daycare in Bangalore with yoga, values, early learning, and nurturing childcare for infants, toddlers, and young children.{% endblock %}
+{% block meta_keywords %}daycare Bangalore, childcare Bangalore, preschool Bangalore, toddler care, infant care{% endblock %}
+{% block canonical_path %}/{% endblock %}
+{% block og_title %}Best Daycare in Bangalore | Radha Krishna Gokula{% endblock %}
+{% block og_description %}Safe and loving daycare in Bangalore with yoga, values, and holistic child development for young children.{% endblock %}
+{% block og_path %}/{% endblock %}
+
+{% block content %}
+
+{% if messages %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    {% for message in messages %}
+    Swal.fire({
+        icon: 'success',
+        title: 'Enquiry Submitted',
+        text: '{{ message }}',
+        confirmButtonColor: '#ff8c00'
+    });
+    {% endfor %}
+});
+</script>
+{% endif %}
+
+<!-- HERO SLIDER (UNCHANGED) -->
+
+<div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<img src="{% static 'images/bg1.png' %}" class="hero-img" alt="Children welcomed at Radha Krishna Gokula daycare" loading="lazy">
+
+<div class="carousel-caption hero-text">
+<h1>A Home of Care and Divine Values</h1>
+<p>Nurturing young hearts with love, discipline and divine values.</p>
+</div>
+
+</div>
+
+<div class="carousel-item">
+<img src="{% static 'images/about-bg.png' %}" class="hero-img" alt="Warm learning environment at Radha Krishna Gokula" loading="lazy">
+</div>
+
+<div class="carousel-item">
+<img src="{% static 'images/bg2.png' %}" class="hero-img" alt="Value-based early childhood care at Radha Krishna Gokula" loading="lazy">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- OUR PHILOSOPHY -->
+
+<section class="container mt-5">
+
+<h2 class="section-title text-center">Our Philosophy</h2>
+
+<div class="philosophy-card">
+
+<p class="text-center">
+
+We believe early childhood is the most important stage of character formation.
+Children should grow not only academically but also develop kindness, responsibility,
+emotional strength, gratitude and self-confidence.
+
+Our environment reflects the warmth of a home and the structure of guided learning.
+
+</p>
+<div class="text-center mt-4">
+
+<a href="/about" class="read-btn">
+Read More
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="container mt-5">
+
+<h2 class="section-title text-center">Our Programs</h2>
+
+<div class="row g-4 mt-4 program-card-row">
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="program-card" data-aos="zoom-in" data-aos-delay="300">
+<h4>Infant Care</h4>
+<p>Gentle attentive care for babies in a safe and loving environment.Focus on emotional security, routine, hygiene, and early sensory development. </p>
+</div>
+</div>
+
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="program-card" data-aos="zoom-in" data-aos-delay="450">
+<h4>Toddler Care</h4>
+<p>Structured yet joyful care supporting language development, motor skills, social habits, and independent behavior.</p>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="program-card" data-aos="zoom-in" data-aos-delay="600">
+<h4>Playgroup</h4>
+<p>A playful learning space introducing early concepts through activities, stories, music, and creative exploration.</p>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="program-card" data-aos="zoom-in" data-aos-delay="750">
+<h4>After School</h4>
+<p>A calm and supportive environment where children complete homework, relax, engage in meaningful activities, and develop positive habits.</p>
+</div>
+</div>
+
+
+
+<div class="col-12 text-center mt-2">
+
+<a href="/programs" class="read-btn">
+View All Programs
+</a>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- UNIQUE APPROACH -->
+
+<section class="container mt-5">
+
+<h2 class="section-title text-center">Our Unique Approach</h2>
+
+<div class="row g-4 mt-4">
+
+<div class="col-12 col-md-6">
+<div class="approach-card gita-bg" data-aos="fade-up" data-aos-delay="300">
+<div class="approach-overlay">
+<h4>Bhagavad Gita Wisdom</h4>
+<p>Children are introduced to simple slokas and stories that teach:<br><br>
+✔ honesty<br>
+✔ courage<br>
+✔ respect<br>
+✔ responsibility<br>
+✔ emotional control</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6">
+<div class="approach-card yoga-bg" data-aos="fade-up" data-aos-delay="450">
+<div class="approach-overlay">
+<h4>Yoga & Meditation</h4><br>
+<p>Short, child-friendly sessions that help: <br><br>
+✔ improve focus<br>
+✔ enhance physical strength<br>
+✔ build self-discipline<br>
+✔ reduce anxiety and restlessness<br>
+✔ promote emotional balance</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6">
+<div class="approach-card activity-bg" data-aos="fade-up" data-aos-delay="600">
+<div class="approach-overlay">
+<h4>Activity Based Learning</h4>
+<p>
+Creative art, rhymes and storytelling.<br><br>
+
+Children learn best by doing. We include:<br>
+
+🎨 Creative art and craft<br>
+🎵 Rhymes and music<br>
+📖 Storytelling sessions<br>
+🧠 Cognitive skill activities
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6">
+<div class="approach-card values-bg" data-aos="fade-up" data-aos-delay="750">
+<div class="approach-overlay">
+<h4>Real World Values</h4>
+<p>Children are gently guided to understand:<br><br>
+✔ empathy<br>
+✔ sharing<br>
+✔ gratitude<br>
+✔ discipline<br>
+✔ respect for all cultures</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+
+<a href="/curriculum" class=" read-btn">
+Learn More
+</a>
+
+</div>
+
+</section>
+
+
+<!-- TWO GRID -->
+
+<section class="container mt-5">
+
+<div class="row g-4">
+
+<div class="col-12 col-md-6">
+<div class="info-card" data-aos="fade-right" data-aos-delay="300">
+
+<h3>Our Approach to Faith</h3>
+
+<p>
+Faith based on understanding and values rather than superstition.
+Children learn clarity, positivity and ethical living.
+</p>
+
+</div>
+</div>
+
+<div class="col-12 col-md-6">
+<div class="info-card" data-aos="fade-left" data-aos-delay="450">
+
+<h3>Our Parenting Principles</h3>
+
+<ul>
+<li>Patient communication</li>
+<li>Emotional understanding</li>
+<li>Structured discipline</li>
+<li>Encouragement not comparison</li>
+<li>Guidance without fear</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NUTRITION SPECIAL -->
+
+<section class="nutrition-section" data-aos="fade-up" data-aos-delay="350">
+
+<div class="container">
+
+<div class="nutrition-overlay">
+
+<h2>Nutrition & Hygiene</h2>
+
+<p>
+Healthy development begins with proper nourishment and cleanliness.
+<br>
+✔ fresh home-style vegetarian meals<br>
+✔ balanced nutrition suitable for growing children<br>
+✔ seasonal fruits and wholesome snacks<br>
+✔ hygienic preparation and safe storage<br>
+✔ clean and sanitized environment<br>
+Food and hygiene are handled with responsibility and care.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ENVIRONMENT + CARE TEAM -->
+
+<section class="container mt-5">
+
+<div class="row g-4">
+
+<div class="col-12 col-md-6">
+<div class="plain-card">
+
+<h3>Safe & Loving Environment</h3>
+
+<ul>
+<li>Small group setting</li>
+<li>Structured daily routine</li>
+<li>Safe indoor learning spaces</li>
+<li>Warm family atmosphere</li>
+</ul>
+
+</div>
+</div>
+
+<div class="col-12 col-md-6">
+<div class="plain-card">
+
+<h3>Our Care Team</h3>
+
+<ul>
+<li>Experience in child care</li>
+<li>Patience and emotional understanding</li>
+<li>Commitment to hygiene and safety</li>
+<li>Nurturing positive habits</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ADMISSION ENQUIRY -->
+
+<section class="admission-section">
+
+<div class="container">
+
+<h2 class="admission-title text-center mb-5">
+Admission Enquiry
+</h2>
+
+<div class="row g-0 admission-box">
+
+<!-- LEFT IMAGE -->
+
+<div class="col-12 col-lg-7 admission-image">
+
+<img src="{% static 'images/daycare.png' %}" class="img-fluid" alt="Admission enquiry for daycare program" loading="lazy">
+
+<div class="image-text">
+We welcome parents who wish to provide their children with a safe,
+loving and value-based environment. <br>
+
+<span class="highlight-text">
+Submit your enquiry and we will contact you soon.
+</span>
+</div>
+
+</div>
+
+
+<!-- RIGHT FORM -->
+
+<div class="col-12 col-lg-5 admission-form" data-aos="fade-up" data-aos-delay="400">
+
+<form method="POST" action="/">
+{% csrf_token %}
+
+<div class="mb-3">
+<input type="text" name="child_name" class="form-control  text-center" placeholder="Child Name">
+</div>
+
+<div class="mb-3">
+<input type="text" name="parent_name" class="form-control  text-center" placeholder="Parent Name">
+</div>
+
+<div class="mb-3">
+<input type="text" name="phone" class="form-control text-center" placeholder="Phone Number">
+</div>
+
+<div class="mb-3">
+<input type="date" name="dob" class="form-control  text-center">
+</div>
+
+<div class="mb-3">
+<input type="text" name="city" class="form-control  text-center" placeholder="City">
+</div>
+
+<div class="mb-3">
+
+<select name="age_group" class="form-control  text-center">
+
+<option>Select age group</option>
+<option>Infant (12–24 months)</option>
+<option>Toddler (2–3 years)</option>
+<option>Playgroup (2–3 years)</option>
+<option>After School</option>
+</select>
+
+</div>
+
+<div class="mb-3">
+<textarea name="message" class="form-control text-center" placeholder="Message"></textarea>
+</div>
+
+<button type="submit" class="enquiry-btn w-100">
+Submit Enquiry
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- MOTTO -->
+
+<section class="motto-section text-center">
+
+<h3 class="motto-marquee">“Nurturing Young Hearts with Love, Discipline and Divine Values.”</h3>
+
+</section>
+
+{% endblock %}

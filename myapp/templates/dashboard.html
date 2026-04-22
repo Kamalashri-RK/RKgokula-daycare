@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container dashboard-container">
+
+<h2 class="text-center mb-4">Admission Enquiries</h2>
+
+<!-- Search -->
+
+<form method="GET" class="mb-4">
+
+<div class="row g-3 align-items-end">
+
+<div class="col-12 col-md-6 col-lg-4">
+<input type="text" name="search" value="{{ search|default:'' }}" class="form-control" placeholder="Search parent or child name">
+</div>
+
+<div class="col-12 col-sm-6 col-md-3 col-lg-2 d-grid">
+<button class="btn btn-primary">Search</button>
+</div>
+
+<div class="col-12 col-sm-6 col-md-3 col-lg-2 d-grid">
+
+{% if search %}
+<a href="/dashboard" class="btn btn-primary">Back</a>
+{% endif %}
+
+</div>
+
+</div>
+
+</form>
+
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped align-middle">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Parent</th>
+<th>Phone</th>
+<th>Child</th>
+<th>Age</th>
+<th>City</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for i in page_obj %}
+
+<tr>
+
+<td>{{i.id}}</td>
+<td>{{i.parent_name}}</td>
+<td>{{i.phone}}</td>
+<td>{{i.child_name}}</td>
+<td>{{i.age_group}}</td>
+<td>{{i.city}}</td>
+
+<td>
+
+{% if i.status == "New" %}
+
+<span class="badge bg-warning">New</span>
+
+{% else %}
+
+<span class="badge bg-success">Contacted</span>
+
+{% endif %}
+
+</td>
+
+<td>
+
+<a href="/contacted/{{i.id}}" class="btn btn-sm btn-success">
+Mark Contacted
+</a>
+
+<a href="/delete/{{i.id}}" class="btn btn-sm btn-danger">
+Delete
+</a>
+
+<a href="/edit/{{i.id}}" class="btn btn-sm btn-primary">
+Edit
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+</div>
+<nav>
+
+<ul class="pagination justify-content-center mt-4">
+
+{% if page_obj.has_previous %}
+
+<li class="page-item">
+<a class="page-link" href="?page={{page_obj.previous_page_number}}">Previous</a>
+</li>
+
+{% endif %}
+
+
+{% for num in page_obj.paginator.page_range %}
+
+<li class="page-item {% if page_obj.number == num %}active{% endif %}">
+<a class="page-link" href="?page={{num}}">{{num}}</a>
+</li>
+
+{% endfor %}
+
+
+{% if page_obj.has_next %}
+
+<li class="page-item">
+<a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a>
+</li>
+
+{% endif %}
+
+</ul>
+
+</nav>
+
+</div>
+
+{% endblock %}

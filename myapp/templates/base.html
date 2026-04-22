@@ -1,0 +1,240 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<title>{% block meta_title %}Radha Krishna Gokula Daycare Bangalore{% endblock %}</title>
+
+<meta name="description" content="{% block meta_description %}Safe and loving daycare in Bangalore with holistic learning, yoga, values, and nurturing care for young children.{% endblock %}">
+<meta name="keywords" content="{% block meta_keywords %}daycare Bangalore, preschool Bangalore, childcare, early learning, toddler care{% endblock %}">
+<meta name="robots" content="index, follow">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://www.radhakrishnagokula.com{% block canonical_path %}/{% endblock %}">
+
+<meta property="og:title" content="{% block og_title %}Radha Krishna Gokula Daycare{% endblock %}">
+<meta property="og:description" content="{% block og_description %}Safe and value-based daycare for children in Bangalore with loving care and holistic learning.{% endblock %}">
+<meta property="og:image" content="https://www.radhakrishnagokula.com{% static 'images/logo.png' %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.radhakrishnagokula.com{% block og_path %}/{% endblock %}">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}?v=33">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "Radha Krishna Gokula",
+  "description": "Safe and value-based daycare and early learning center in Bangalore.",
+  "telephone": "+91-8088121292",
+  "email": "info@radhakrishnagokula.com",
+  "url": "https://www.radhakrishnagokula.com",
+  "image": "https://www.radhakrishnagokula.com{% static 'images/logo.png' %}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sarvabhouma Nagar, Chikkalasandra",
+    "addressLocality": "Bangalore",
+    "postalCode": "560061",
+    "addressCountry": "IN"
+  }
+}
+</script>
+{% block extra_schema %}{% endblock %}
+<!-- Google Analytics placeholder -->
+<!-- Google Search Console verification placeholder -->
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg white-navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center" href="/">
+<img src="{% static 'images/logo.png' %}" class="logo" alt="Radha Krishna Gokula daycare logo" loading="lazy">
+
+<div class="brand-container ms-2">
+
+<span class="brand-text">
+Radha Krishna Gokula
+</span>
+
+<span class="brand-subtext">
+Daycare & Early Learning
+</span>
+
+</div>
+
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="menu">
+
+<ul class="navbar-nav">
+
+<li class="nav-item">
+<a class="nav-link custom-link" href="/">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link custom-link" href="/about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link custom-link" href="/programs">Programs</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link custom-link" href="/curriculum">Curriculum</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link custom-link" href="/gallery">Gallery</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link custom-link" href="/contact">Contact</a>
+</li>
+
+{% if user.is_authenticated %}
+<li class="nav-item">
+<a class="nav-link custom-link" href="/logout">Logout</a>
+</li>
+{% endif %}
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- PAGE CONTENT -->
+
+{% block content %}
+
+{% endblock %}
+
+
+
+<!-- FOOTER -->
+
+<footer class="main-footer">
+
+<div class="container">
+
+<div class="row g-4">
+
+<!-- ABOUT -->
+
+<div class="col-12 col-sm-6 col-lg-3">
+
+<h4>Radha Krishna Gokula</h4>
+
+
+<p>
+A home of care and divine values where children grow with love,
+discipline, kindness and joyful learning.
+</p>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="col-12 col-sm-6 col-lg-3">
+
+<h4>Contact</h4>
+
+<p>📞 8088121292</p>
+
+<p>✉️ info@radhakrishnagokula.com</p>
+
+<p>
+📍 Sarvabhouma Nagar <br>
+Chikkalasandra <br>
+Bangalore-560061
+</p>
+
+</div>
+
+
+<!-- LINKS -->
+
+<div class="col-12 col-sm-6 col-lg-3">
+
+<h4>Quick Links</h4>
+
+<ul class="footer-links">
+
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/programs">Programs</a></li>
+<li><a href="/gallery">Gallery</a></li>
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- ACTIVITIES -->
+
+<div class="col-12 col-sm-6 col-lg-3">
+
+<h4>Activities</h4>
+
+<ul class="footer-links">
+
+<li>Creative Art</li>
+<li>Outdoor Games</li>
+<li>Storytelling</li>
+<li>Building Blocks</li>
+<li>Yoga & Meditation</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="text-center">
+
+<p>© 2026 Radha Krishna Gokula</p>
+
+</div>
+
+</div>
+
+</footer>
+<a href="https://wa.me/8088121292" class="whatsapp-btn">💬</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 700,
+        once: true,
+        easing: "ease-out-cubic",
+        offset: 80
+    });
+});
+</script>
+
+</body>
+</html>
